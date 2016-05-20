@@ -46,6 +46,7 @@ class Accueil: UIViewController{
             textField_familyName.hidden = true
             button_launch.hidden = true
             button_logIn.hidden = false
+            button_SeConnecter.hidden = true
             button_Connection.setTitle("Pas encore inscrit ? Veuillez créer un compte", forState: UIControlState.Normal)
         }
         else
@@ -55,6 +56,7 @@ class Accueil: UIViewController{
             button_launch.hidden = false
             button_Score.hidden = false
             button_logIn.hidden = true
+            button_SeConnecter.hidden = true
             textField_Username.hidden = true;
             textField_name.hidden = true
             textField_familyName.hidden = true
@@ -79,6 +81,16 @@ class Accueil: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var button_SeConnecter: UIButton!
+    @IBAction func button_seConnecter_click(sender: UIButton)
+    {
+        if(textField_Username.text != "")
+        {
+            usernameLogConn = logConn.ReadFromFile()
+            button_launch.hidden = false
+            button_SeConnecter.hidden = true
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -115,8 +127,9 @@ class Accueil: UIViewController{
         textField_name.hidden = false
         textField_familyName.hidden = false
         label_Username.hidden = true
-        button_launch.hidden = false
+        button_launch.hidden = true
         button_logIn.hidden = true
+        button_SeConnecter.hidden = false
     }
 
     @IBAction func button_Score_click(sender: UIButton)

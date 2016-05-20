@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         backgroundVideoPlayer.play()
         
         //loop video
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.loopVideo), name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loopVideo", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
     }
     
     func loopVideo() {
@@ -158,7 +158,7 @@ class ViewController: UIViewController {
         catch let error as NSError { print(error.description) }
         
         player.numberOfLoops = -1
-        player.volume = s_lo.split_musique == true ? 1.0 : 0.0
+        player.volume = s_lo.split_musique == true ? 0.5 : 0.0
         player.prepareToPlay()
         player.play()
     }
@@ -414,7 +414,7 @@ class ViewController: UIViewController {
         {
             let str = getImg(i + 1);
             self.tabCarte[i].backgroundColor = setBackGroundCarte(tabCarte[i], nameImg: str)
-            if(str == "blanc.png" && tabCarte[i].hidden == false)
+            if(str == "versoFound.png" && tabCarte[i].hidden == false)
             {
                 tabCarte[i].hidden = true
             }
@@ -448,7 +448,7 @@ class ViewController: UIViewController {
     
     func animateCardReverse(idCard : Int)
     {
-        if(getImg(idCard + 1) == "blanc.png")
+        if(getImg(idCard + 1) == "versoFound.png")
         {
             return;
         }
@@ -508,7 +508,8 @@ class ViewController: UIViewController {
         case 4 : return "4.png";
         case 5 : return "5.png";
         case 6 : return "6.png";
-        case 7 : return "blanc.png";
+        //case 7 : return "blanc.png";
+        case 7 : return "versoFound.png";
         default: return "";
         }
     }
