@@ -89,6 +89,7 @@ class Accueil: UIViewController{
     {
         if(textField_Username.text != "")
         {
+<<<<<<< HEAD
             s_lc.username = textField_Username.text!
             s_lc.name = textField_name.text!
             s_lc.familyName = textField_familyName.text!
@@ -97,6 +98,11 @@ class Accueil: UIViewController{
             button_launch.hidden = false
             button_SeConnecter.hidden = true
             button_Score.hidden = false
+=======
+            usernameLogConn = logConn.ReadFromFile()
+            button_launch.hidden = false
+            button_SeConnecter.hidden = true
+>>>>>>> d72a814df6146dd7ff09a169f3b08281e8cbd831
         }
     }
 
@@ -138,7 +144,10 @@ class Accueil: UIViewController{
         button_launch.hidden = true
         button_logIn.hidden = true
         button_SeConnecter.hidden = false
+<<<<<<< HEAD
         button_Score.hidden = true
+=======
+>>>>>>> d72a814df6146dd7ff09a169f3b08281e8cbd831
     }
 
     @IBAction func button_Score_click(sender: UIButton)
