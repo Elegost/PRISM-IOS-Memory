@@ -38,6 +38,7 @@
 		EC1423AC1C843C210026C5DE /* blanc.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1423A41C843C210026C5DE /* blanc.png */; };
 		EC3B8F9D1CB25AFE00F55B4D /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3B8F9C1CB25AFE00F55B4D /* Accueil.swift */; };
 		ECEAA8E81CA0004D00F88559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEAA8E71CA0004D00F88559 /* LaunchScreen.storyboard */; };
+		ECF1E4121CEB027300CA13A4 /* versoFound.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF1E4111CEB027300CA13A4 /* versoFound.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		EC1423A41C843C210026C5DE /* blanc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blanc.png; sourceTree = "<group>"; };
 		EC3B8F9C1CB25AFE00F55B4D /* Accueil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 		ECEAA8E71CA0004D00F88559 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECF1E4111CEB027300CA13A4 /* versoFound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = versoFound.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				12B593871C94926C0039CC1D /* 5.png */,
 				12B593891C94926C0039CC1D /* 6.png */,
 				12B593881C94926C0039CC1D /* verso.png */,
+				ECF1E4111CEB027300CA13A4 /* versoFound.png */,
 				1215F3C91CE7E55000557A59 /* Mercy.m4a */,
 				1215F3CA1CE7E55000557A59 /* Reaper.m4a */,
 				1215F3CB1CE7E55000557A59 /* Symmetra.m4a */,
@@ -306,6 +309,7 @@
 				12B5938E1C94926C0039CC1D /* 5.png in Resources */,
 				EC1423AC1C843C210026C5DE /* blanc.png in Resources */,
 				12B5938F1C94926C0039CC1D /* verso.png in Resources */,
+				ECF1E4121CEB027300CA13A4 /* versoFound.png in Resources */,
 				12B5938B1C94926C0039CC1D /* 2.png in Resources */,
 				1215F3D11CE7E55000557A59 /* Symmetra.m4a in Resources */,
 				EC1058881CE0AEF000EF1C42 /* Ambiance.m4a in Resources */,

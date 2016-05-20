@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vd9-Nx-k04">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vd9-Nx-k04">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,8 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre pseudo ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwL-c6-ULj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre pseudo ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lwL-c6-ULj">
                                 <rect key="frame" x="181" y="62" width="238" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" keyboardAppearance="alert"/>
                             </textField>
@@ -136,15 +139,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre nom ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbd-pw-oek">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre nom ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mbd-pw-oek">
                                 <rect key="frame" x="181" y="20" width="97" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="t8a-Uu-68l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" keyboardAppearance="alert"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre prénom ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XM3-rX-CrB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre prénom ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XM3-rX-CrB">
                                 <rect key="frame" x="286" y="20" width="133" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="uBx-qQ-gwr"/>
@@ -165,6 +171,13 @@
                                     <segue destination="ofH-qS-z1o" kind="show" id="sbs-sW-9aT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-J6-7yF">
+                                <rect key="frame" x="39" y="176" width="523" height="30"/>
+                                <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <action selector="button_seConnecter_click:" destination="vd9-Nx-k04" eventType="touchUpInside" id="IAa-Gj-5Ou"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -172,6 +185,7 @@
                             <constraint firstItem="TDo-TZ-bKp" firstAttribute="centerX" secondItem="XDU-II-idT" secondAttribute="centerX" id="43Q-7g-tQ1"/>
                             <constraint firstItem="lwL-c6-ULj" firstAttribute="top" secondItem="Mbd-pw-oek" secondAttribute="bottom" constant="12" id="5MX-oV-lpJ"/>
                             <constraint firstItem="lwL-c6-ULj" firstAttribute="trailing" secondItem="TDo-TZ-bKp" secondAttribute="trailing" id="5uP-6d-Oxx"/>
+                            <constraint firstItem="9wE-J6-7yF" firstAttribute="leading" secondItem="XDU-II-idT" secondAttribute="leading" id="7LB-CZ-IYF"/>
                             <constraint firstItem="TDo-TZ-bKp" firstAttribute="top" secondItem="Qza-Sg-M8r" secondAttribute="bottom" constant="30" id="BAX-yX-8ZO"/>
                             <constraint firstItem="XDU-II-idT" firstAttribute="leading" secondItem="3qw-ao-O89" secondAttribute="leading" id="ClF-Mt-jCK"/>
                             <constraint firstItem="NBn-j7-dAq" firstAttribute="trailing" secondItem="1fq-05-E7W" secondAttribute="trailing" id="GOU-P6-0ej"/>
@@ -181,6 +195,7 @@
                             <constraint firstItem="Mbd-pw-oek" firstAttribute="baseline" secondItem="XM3-rX-CrB" secondAttribute="baseline" id="NDX-VV-oax"/>
                             <constraint firstItem="Mbd-pw-oek" firstAttribute="leading" secondItem="lwL-c6-ULj" secondAttribute="leading" id="Oz9-U2-n22"/>
                             <constraint firstItem="3qw-ao-O89" firstAttribute="leading" secondItem="1fq-05-E7W" secondAttribute="leading" id="T2Y-6C-iHj"/>
+                            <constraint firstItem="9wE-J6-7yF" firstAttribute="trailing" secondItem="XDU-II-idT" secondAttribute="trailing" id="Ul9-CS-5kI"/>
                             <constraint firstItem="Mbd-pw-oek" firstAttribute="top" secondItem="GcF-qN-y8L" secondAttribute="bottom" id="Vhb-gI-4wC"/>
                             <constraint firstItem="Qza-Sg-M8r" firstAttribute="top" secondItem="lwL-c6-ULj" secondAttribute="bottom" constant="8" symbolic="YES" id="Wuy-Kl-q4x"/>
                             <constraint firstItem="aAF-YV-kcf" firstAttribute="trailing" secondItem="3qw-ao-O89" secondAttribute="trailing" id="Xu4-CF-ndy"/>
@@ -190,6 +205,7 @@
                             <constraint firstItem="Qza-Sg-M8r" firstAttribute="trailing" secondItem="x0J-It-SPH" secondAttribute="trailingMargin" id="cEV-BI-Ljr"/>
                             <constraint firstItem="XM3-rX-CrB" firstAttribute="leading" secondItem="Mbd-pw-oek" secondAttribute="trailing" constant="8" symbolic="YES" id="ceq-2Q-gnD"/>
                             <constraint firstItem="aAF-YV-kcf" firstAttribute="leading" secondItem="1fq-05-E7W" secondAttribute="leading" id="eHk-sU-yo2"/>
+                            <constraint firstItem="XDU-II-idT" firstAttribute="top" secondItem="9wE-J6-7yF" secondAttribute="bottom" constant="8" symbolic="YES" id="iBX-hr-9BT"/>
                             <constraint firstItem="XDU-II-idT" firstAttribute="top" secondItem="TDo-TZ-bKp" secondAttribute="bottom" constant="33" id="maN-Ki-Qlh"/>
                             <constraint firstItem="TDo-TZ-bKp" firstAttribute="centerX" secondItem="NBn-j7-dAq" secondAttribute="centerX" id="muP-ID-4fM"/>
                             <constraint firstItem="Qza-Sg-M8r" firstAttribute="leading" secondItem="x0J-It-SPH" secondAttribute="leadingMargin" id="nlc-Dg-i87"/>
@@ -204,6 +220,7 @@
                         <outlet property="ViewScore" destination="3qw-ao-O89" id="Bxn-3E-Lwa"/>
                         <outlet property="button_Connection" destination="1fq-05-E7W" id="siw-Uh-MfE"/>
                         <outlet property="button_Score" destination="XDU-II-idT" id="SNH-JS-ZFQ"/>
+                        <outlet property="button_SeConnecter" destination="9wE-J6-7yF" id="aTd-yN-7MK"/>
                         <outlet property="button_launch" destination="TDo-TZ-bKp" id="COc-gi-Omb"/>
                         <outlet property="button_logIn" destination="NBn-j7-dAq" id="MEt-gu-cUX"/>
                         <outlet property="label_Username" destination="Qza-Sg-M8r" id="wad-7K-goH"/>
@@ -225,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYu-Ua-4cI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1237" y="-505"/>
+            <point key="canvasLocation" x="-1237" y="-448"/>
         </scene>
         <!--Options-->
         <scene sceneID="AGz-4r-S0b">
